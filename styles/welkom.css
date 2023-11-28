@@ -14,16 +14,6 @@
     src: url(../font/Avenir\ -black.ttf);
 }
 
-/* Custom properties */
-/* :root {
-    --red:#FF0000;
-    --dark-color:#ce0000;
-    --black:#000000;
-    --gray:#666;
-    /* --border: .1rem solid rgba(0,0,0,.1);
-    --border-hover: .1rem solid var(--black);
-    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); 
-} */
 
 *{
     padding: 0;
@@ -38,8 +28,8 @@
     --primary-color: #FF0000;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
-    --text-color: #020024;
-  
+    --text-color-light: #020024;
+    --text-color-dark:var(--primary-color-light)
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;   
@@ -47,7 +37,6 @@
     --tran-04: all 0.3s ease;
     --tran-05: all 0.3s ease;
 }
-
 
 body{
     min-height: 100vh;
@@ -357,3 +346,178 @@ body.dark .switch::before{
 body.dark .home .text{
     color: var(--text-color);
 }
+
+/* MIJN CODE BEGINT HEIR */
+
+.toggle-button {
+    position: relative;
+    background-color: var(--primary-color-light);
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.7em;
+    height: 3em;
+    padding-left: 0.3em;
+    cursor: pointer;
+}
+
+.bar {
+    height:0.4em;
+    width: 2.4em;
+    background-color:var(--primary-color);
+    border-radius: 3px; 
+    margin: 5px 0;     
+}
+
+/* zoek button */
+.search-button{
+    width:3rem;
+    padding: 3px 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button:hover{
+    background-color: #ccc;
+}
+
+.input-search{
+    width:15rem;
+    height: 2rem;    
+}
+
+.section1{
+    min-width: 390px;
+}
+
+.ul-book{
+    list-style-type: none;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.li-book{
+    width:15rem;
+    background-color: hotpink;
+    margin:0.4rem;
+}
+
+.img-book{
+    height: 15rem;
+    width: 12rem;
+    object-fit:cover;
+}   
+
+
+/* media query  */
+
+/* mobile */
+@media(max-width:767px){
+    
+    .sidebar{
+        display: none;
+        position: fixed;
+        top: 3em; 
+    }
+    .toggle-button{
+        position: fixed;
+    }
+    .sidebar.active{
+        display: block;
+    }
+    .sidebar header .toggle{
+        display: none;
+        
+    }
+    .oba-logo{
+        padding-top: 0.5em;
+        padding-left: 1em
+    }   
+}
+
+/* tablet */
+@media(min-width:768px ) and (max-width:1279px){
+    .ul-blok{   
+        flex-wrap: wrap;
+    }
+    .sidebar{
+        display: none;
+        position:fixed;
+        top: 3em;  
+    }
+    .toggle-button{
+        position: fixed;
+    }
+    .sidebar.active{
+        display: block;
+    }
+    .sidebar header .toggle{
+        display: none;
+        
+    }
+    .oba-logo{
+        padding-top: 0.5em;
+        padding-left: 1em
+    }   
+}
+    
+/* desktop */
+@media(min-width:1280px){
+    .gebruiker{
+        padding: 0 7em 3em;
+    }
+    .ul-blok{
+        display: flex;
+        overflow-x:scroll;
+    }
+    .h1-text{
+        font-size: 30px;
+        padding-left:29rem ;
+        margin: 1em;
+    }
+    .h2-text{
+        font-size: 20px;
+        padding-left:32rem 
+
+    }
+    .sidebar.close .text{
+    opacity: 0;
+    }
+    .sidebar.close{
+    width: 80px;
+    }
+    .sidebar.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+    }
+    .oba-logo{
+        padding-top: 0.5em;
+        padding-left: 3em
+    }
+    .scroll-links{
+        margin-left: 5em;   
+    }
+    .scroll-rechts{
+        margin-right: 3em;
+    }
+
+    .section1{
+        margin:5rem;
+        padding-left:18rem;
+    }
+    .section2{
+        margin:5rem;
+    } 
+    .ul-book{
+        max-width: 55rem;
+        margin-left:10rem;
+    }
+    .input-search{
+        width:30rem;
+    }
+    .h1{
+        margin: 6rem;
+    }
+}
+
