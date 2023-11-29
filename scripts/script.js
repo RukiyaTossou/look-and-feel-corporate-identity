@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let scrollAmount = 400; // het aantal pixels om te scrollen
 
     scrollLeftButton.addEventListener("click", function () {
-        ulBlok.scrollLeft -= scrollAmount;
+        ulBlok.scrollLeft -= scrollAmount;-
     });
 
     scrollRightButton.addEventListener("click", function () {

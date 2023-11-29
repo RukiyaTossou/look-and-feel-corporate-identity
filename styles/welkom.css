@@ -380,8 +380,47 @@ body.dark .home .text{
 }
 
 .search-button:hover{
-    background-color: #ccc;
+    background-color: #cccccc;
 }
+.header-welkom {
+    position: relative;
+    width: 100%;
+    max-width: 100rem;
+    height: 15rem;
+    overflow: hidden; 
+    margin-bottom: 3rem;
+  
+}
+
+#afbeelding-header {
+    width: 100%;
+    min-width: 15rem;
+    height: 100%;
+    min-height:rem;
+    object-fit: cover;
+ 
+}
+
+
+.h1-welkom-text{
+    font-size:18px ;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    min-width:15rem;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #ded7d7;
+    padding: 2rem 3rem 2rem 3rem;
+
+}
+.p-welkom-text {
+    
+}
+
+
+
+
 
 .input-search{
     width:15rem;
@@ -400,16 +439,36 @@ body.dark .home .text{
 
 .li-book{
     width:15rem;
-    background-color: hotpink;
+    background-color:   rgb(233, 237, 245);
     margin:0.4rem;
 }
 
 .img-book{
-    height: 15rem;
-    width: 12rem;
+    height: 12rem;
+    width: 10rem;
     object-fit:cover;
-}   
+}  
 
+
+.heart-btn {
+    border: 0;
+    position:relative;
+    left:8.5rem;
+    top:0.3rem;
+    font-size: 1.3rem;
+    transition:fill 0.3s ease;
+}
+
+.heart-btn:hover {
+    color: firebrick; /* Color on hover, giving the appearance of filling */
+}
+.kopje{
+    margin-left:1rem;
+}
+
+.h3-titel{
+    margin-left: 3rem;
+}
 
 /* media query  */
 
@@ -461,6 +520,28 @@ body.dark .home .text{
         padding-top: 0.5em;
         padding-left: 1em
     }   
+    .input-search{
+        width:25rem;
+        margin-left: 5rem;
+    }
+    
+    .p-welkom-text{
+        max-width: 25rem;
+        margin-left: 5rem;
+    }
+    .kopje{
+        margin-left:2rem;
+    }
+    .h1-welkom-text{
+    font-size:26px ;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #ded7d7;
+    padding: 2rem 4rem 2rem 4rem;
+}
 }
     
 /* desktop */
@@ -519,5 +600,24 @@ body.dark .home .text{
     .h1{
         margin: 6rem;
     }
+    /* .p-welkom-text{
+        max-width: 25rem;
+        margin-left: 25rem;
+    } */
+    .kopje{
+        margin-left:8rem;
+    }
+    
+.h1-welkom-text{
+    font-size:40px ;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #ded7d7;
+    padding: 4rem 6rem 4rem 6rem;
+
+}
 }
 
