@@ -104,7 +104,7 @@ body.dark{
 
 .sidebar .text,
 .sidebar .icon{
-    color: var(--text-color);
+    color: var(--text-color-light);
     transition: var(--tran-03);
 }
 
@@ -385,7 +385,7 @@ body.dark .home .text{
 .header-welkom {
     position: relative;
     width: 100%;
-    max-width: 100rem;
+    max-width: 155rem;
     height: 15rem;
     overflow: hidden; 
     margin-bottom: 3rem;
@@ -417,11 +417,6 @@ body.dark .home .text{
 .p-welkom-text {
     
 }
-
-
-
-
-
 .input-search{
     width:15rem;
     height: 2rem;    
@@ -611,7 +606,7 @@ body.dark .home .text{
 .h1-welkom-text{
     font-size:40px ;
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
