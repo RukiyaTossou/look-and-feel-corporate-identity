@@ -14,29 +14,45 @@
     src: url(../font/Avenir\ -black.ttf);
 }
 
-
-*{
-    padding: 0;
-    box-sizing: border-box;
-    /* font-family: 'Poppins', sans-serif; */
-}
-
 :root{
     /* ===== Colors ===== */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
-    --primary-color: #FF0000;
-    --primary-color-light: #F6F5FF;
+    --Oba-main-color: #FF0000;
+    --main-color-light: #fafaff;
     --toggle-color: #DDD;
     --text-color-light: #020024;
-    --text-color-dark:var(--primary-color-light)
+    --text-color-dark:var(--main-color-light)
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;   
     --tran-03: all 0.3s ease;
     --tran-04: all 0.3s ease;
     --tran-05: all 0.3s ease;
+    
+    /* buttons */
+    --btn-main:#000;
+    --hover-btn-main:#414141;
+    --btn-secundair:#fff; 
+    --hover-btn-secundair:#f1f1f1;
+    --btn-special:#eb0505;
+    --hover-btn-scpecial:#cd0404;
+
+    /* Font-size */
+    --title-h1-large:40;
+    --title-h1-medium:30;
+    --title-h1-small:20;
+
+     /* font */
+     --primary-font:"Avenir-roman", "Montserrat", "Poppins", sans-serif;
 }
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+
 
 body{
     min-height: 100vh;
@@ -373,14 +389,14 @@ body.dark .home .text{
 .search-button{
     width:3rem;
     padding: 3px 3px;
-    background-color: #fff;
+    background-color: var(--btn-secundair);
     border-radius: 2px;
     border: none;
     cursor: pointer;
 }
 
 .search-button:hover{
-    background-color: #cccccc;
+    background-color: var(--hover-btn-secundair);
 }
 .header-welkom {
     position: relative;
@@ -424,15 +440,24 @@ body.dark .home .text{
 
 .section1{
     min-width: 390px;
-}
+    }
 
 .ul-book{
-    list-style-type: none;
     display: flex;
     overflow-x: scroll;
+    scrollbar-width: none;
+
+}
+.ul-book ::-webkit-scrollbar{
+    display: none;
+}
+.li-book:hover {
+    transform: scale(1.05); /*meer "pop" effect als je de schaal verhoogt */
+    transition: transform 0.3s ease; 
 }
 
 .li-book{
+    list-style-type: none;
     width:15rem;
     background-color:   rgb(233, 237, 245);
     margin:0.4rem;
@@ -455,7 +480,7 @@ body.dark .home .text{
 }
 
 .heart-btn:hover {
-    color: firebrick; /* Color on hover, giving the appearance of filling */
+    color: var(--primary-color); /* Color on hover, giving the appearance of filling */
 }
 .kopje{
     margin-left:1rem;

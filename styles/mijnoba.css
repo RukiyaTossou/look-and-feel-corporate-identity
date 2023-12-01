@@ -369,7 +369,7 @@ body.dark .home .text{
 .ul-blok{
     /* scrol element maken */
     display: flex;
-    overflow-x: scroll;
+    overflow-x: scroll; 
 }
 
 .ul-blok::-webkit-scrollbar {
